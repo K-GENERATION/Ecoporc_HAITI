@@ -32,11 +32,13 @@ h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
+.h2 {text-align: right;}
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+    text-align: right;
 }
 
 /* Navigation */
@@ -192,7 +194,9 @@ h1, h2, h3 {
 /* About Section */
 .about {
     padding: 80px 0;
-    text-align: center;
+    text-align: right;
+    background-image: url(image1.png);
+    background-position: left;
 }
 
 .about h2 {
@@ -204,6 +208,7 @@ h1, h2, h3 {
 .about p {
     max-width: 800px;
     margin: 0 auto;
+    text-align: right;
 }
 
 /* Footer */
@@ -241,5 +246,106 @@ h1, h2, h3 {
     }
     .hero-content h1 {
         font-size: 2rem;
+    }
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA; /* Blanc cassé */
+    color: #555555; /* Gris pour le texte courant */
+}
+
+.mission-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-image-container {
+    flex: 1 1 50%; /* Takes 50% width, shrinks if needed */
+    max-width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.mission-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.mission-content {
+    flex: 1 1 50%; /* Takes 50% width, shrinks if needed */
+    max-width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.mission-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px; /* H1 size as per Cahier des Charges, adapted for section title */
+    font-weight: 700; /* Gras */
+    color: #2D6A2D; /* Vert foncé */
+    margin-bottom: 20px;
+}
+
+.mission-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.mission-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.mission-content ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 16px;
+}
+
+.icon-check {
+    color: #2D6A2D; /* Vert foncé */
+    font-size: 20px;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+.mission-content ul li strong {
+    color: #795548; /* Marron terreux for sub-titles/key points */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Semi-gras */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mission-section {
+        flex-direction: column; /* Stack items vertically */
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .mission-image-container,
+    .mission-content {
+        max-width: 100%; /* Full width on small screens */
+        flex: 1 1 100%;
+        padding: 15px;
+    }
+
+    .mission-content h2 {
+        font-size: 28px;
     }
 }
