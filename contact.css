@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7f4;
+}
+
+.contact-section{
+    padding:60px 20px;
+}
+
+.contact-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.contact-header h1{
+    font-size:50px;
+    color:#2f6f34;
+    margin-bottom:15px;
+}
+
+.contact-header p{
+    max-width:700px;
+    margin:auto;
+    color:#555;
+    line-height:1.8;
+}
+
+.contact-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info,
+.contact-form{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-info h2,
+.contact-form h2{
+    color:#2f6f34;
+    margin-bottom:25px;
+}
+
+.info-item{
+    margin-bottom:20px;
+}
+
+.info-item strong{
+    color:#2f6f34;
+}
+
+.info-item p{
+    margin-top:5px;
+    color:#555;
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-form button{
+    background:#2f6f34;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-form button:hover{
+    background:#204b24;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.map-section{
+    padding:50px 20px;
+    text-align:center;
+}
+
+.map-section h2{
+    color:#2f6f34;
+    margin-bottom:20px;
+}
+
+.map-section iframe{
+    width:100%;
+    max-width:1200px;
+    height:450px;
+    border:none;
+    border-radius:15px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .contact-header h1{
+        font-size:36px;
+    }
+
+}

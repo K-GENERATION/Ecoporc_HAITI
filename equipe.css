@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f7f3;
+}
+
+.team-page{
+    padding:60px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h1{
+    font-size:50px;
+    color:#2f6f34;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    max-width:700px;
+    margin:auto;
+    color:#555;
+    line-height:1.7;
+    text-align:justify;
+}
+
+.team-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.member-card{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    background:white;
+    margin-bottom:30px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.member-card img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.member-info{
+    flex:1;
+}
+
+.member-info h2{
+    color:#2f6f34;
+    margin-bottom:10px;
+}
+
+.role{
+    display:inline-block;
+    background:#2f6f34;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+.member-info p{
+    line-height:1.8;
+    color:#444;
+    margin-bottom:20px;
+}
+
+.cv-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#2f6f34;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.cv-btn:hover{
+    background:#204b24;
+}
+
+@media(max-width:768px){
+
+    .member-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .member-card img{
+        width:180px;
+        height:180px;
+    }
+
+    .section-title h1{
+        font-size:36px;
+    }
+
+}
