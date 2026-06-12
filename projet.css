@@ -1,0 +1,146 @@
+/* ===== SECTION PROJET ===== */
+
+.projet{
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 20px;
+    background: #f5f7f4;
+}
+
+/* TITRE */
+
+.titre-section{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titre-section h1{
+    color: #2f6f34;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.titre-section p{
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* BLOCS */
+
+.bloc-projet{
+    background: #ffffff;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    border-color: #FF8F00;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.bloc-projet h2{
+    color: #2f6f34;
+    margin-bottom: 25px;
+    border-left: 6px solid #e2af05;
+    padding-left: 15px;
+    font-size: 32px;
+}
+
+.bloc-projet p{
+    color: #555;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* LISTES */
+
+.bloc-projet ul{
+    margin-top: 20px;
+}
+
+.bloc-projet li{
+    margin-bottom: 15px;
+    color: #444;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* GRILLE */
+
+.grille{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* CARTES */
+
+.carte{
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border-top: 5px solid #FF8F00;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    transition: .4s;
+}
+
+.carte:hover{
+    transform: translateY(-8px);
+}
+
+.carte h3{
+    color: #2f6f34;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.carte p{
+    color: #666;
+    line-height: 1.7;
+}
+
+/* SECTION IMPACT */
+
+.impact{
+    background: linear-gradient(
+        135deg,
+        #2f6f34,
+        #3f8c46
+    );
+    color: white;
+}
+
+.impact h2{
+    color: white;
+    border-left: 6px solid white;
+}
+
+.impact p,
+.impact li{
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .titre-section h1{
+        font-size: 38px;
+    }
+
+    .bloc-projet{
+        padding: 25px;
+    }
+
+    .bloc-projet h2{
+        font-size: 26px;
+    }
+
+    .grille{
+        grid-template-columns: 1fr;
+    }
+
+}
