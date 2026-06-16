@@ -8,14 +8,14 @@
     <title>GALERIE DU PROJET</title>
 </head>
 <body>
-    <header class="main-header">
+       <header class="main-header">
         <nav class="navbar">
             <div class="logo">
                 <img src="pictures/logo.png" alt="Ecoporc+ Logo" class="logo-img">
                 <h1>ECOPORC+ D'Haïti</h1>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-item">ACCUEIL</a></li>
+            <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="projet.html" class="nav-item">LE PROJET</a></li>
                 <li><a href="equipe.html" class="nav-item">NOTRE EQUIPE</a></li>
                 <li><a href="activite.html" class="nav-item">NOS ACTIVITÉS</a></li>
@@ -23,6 +23,11 @@
                 <li><a href="contact.html" class="nav-item cta-nav">NOUS CONTACTER</a></li>
             </ul>
         </nav>
+        <script>
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('nav-links').classList.toggle('nav-open');
+            });
+        </script>
     </header>
     <section class="galerie">
 
@@ -44,7 +49,7 @@
 
             <div class="photo-card">
                 <img src="pictures/Image13.jpeg" alt="Marie Pierre">
-                <p>INNONCENT GARLINE<br>Secrétaire Administrative</p>
+                <p>INNOCENT GARLINE<br>Secrétaire Administrative</p>
             </div>
 
             <div class="photo-card">
@@ -155,9 +160,13 @@
             </div>
         </div>
         <div class="Footer-buttons">
-            <a href="plan d'affaires.pdf" class="Btn" target="_blank">TÉLÉCHARGER LE PLAN D'AFFAIRES DU PROJET</a>
+            <a href="Plan_d_affaires.pdf" class="Btn" target="_blank">TÉLÉCHARGER LE PLAN D'AFFAIRES DU PROJET</a>
             <a href="contact.html" class="Btn">CONTACTER L'EQUIPE DE GESTION DU PROJET</a>
         </div>
     </footer>
+       <!-- Bouton flottant WhatsApp -->
+<a href="https://wa.me/50955304065" target="_blank" class="whatsapp-float" aria-label="Envoyer un message WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
+</a>
 </body>
 </html>

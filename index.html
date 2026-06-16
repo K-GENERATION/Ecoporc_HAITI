@@ -15,7 +15,8 @@
                 <img src="pictures/logo.png" alt="Ecoporc+ Logo" class="logo-img">
                 <h1>ECOPORC+ D'Haïti</h1>
             </div>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="projet.html" class="nav-item">LE PROJET</a></li>
                 <li><a href="equipe.html" class="nav-item">NOTRE EQUIPE</a></li>
                 <li><a href="activite.html" class="nav-item">NOS ACTIVITÉS</a></li>
@@ -23,6 +24,11 @@
                 <li><a href="contact.html" class="nav-item cta-nav">NOUS CONTACTER</a></li>
             </ul>
         </nav>
+        <script>
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('nav-links').classList.toggle('nav-open');
+            });
+        </script>
     </header>
 
     <!-- Hero Section -->
@@ -31,7 +37,7 @@
             <h1>Nourrir Haïti - Préserver la nature - Bâtir l'avenir </h1>
             <p>Un projet d'élevage porcin durable porté par des jeunes universitaires engagés pour l'agriculture et l'environnement.</p>
             <div class="hero-btns">
-                <a href="Plan d'affaires.pdf" class="btn btn-primary">Découvrir le projet</a>
+                <a href="Plan_d_affaires.pdf" class="btn btn-primary">TELECHARGER LE PLAN D'AFFAIRES DU PROJET</a>
                 <a href="contact.html" class="btn btn-secondary">Devenir partenaire</a>
             </div>
         </div>
@@ -69,7 +75,8 @@
 
         <p class="equipe-description">
             Une équipe professionnelle motivée par une vision claire: <br>
-            <class="Equipe-description"><strong> Nourrir Haïti de façon durable et prospère.</strong></p>
+            <strong>Nourrir Haïti de façon durable et prospère.</strong>
+        </p>
 
         <div class="equipe-grid">
             <div class="equipe-card">
@@ -82,8 +89,8 @@
             </div>
 
              <div class="equipe-card">
-                <img src="pictures/Image13.jpeg" alt="INNONCENT GARLINE   ">
-                <h3>INNONCENT GARLINE</h3>
+                <img src="pictures/Image13.jpeg" alt="INNOCENT GARLINE">
+                <h3>INNOCENT GARLINE</h3>
                 <p><strong>Secrétaire Administrative</strong><br> 
                     Technicienne en coupe et confection<br>
                     Tel: +509 5572-7059<br>
@@ -98,15 +105,14 @@
                     Tel: (+509) 4149-5419<br>
                     Email:  estiverneguivenchy@gmail.com</p>
             </div>
-
         </div>
     </div>
 </section>
-</body>
+
 
     <!-- Footer -->
     <footer class="main-footer">
-        <div class="Container">
+        <div class="container">
             <div class="footer-info">
                 <p>&copy; 2026 Ecoporc+ d'Haïti. Tous droits réservés.</p>
                 <p>Contact :  | +509 5530-4065 | erodemondelus509@gmail.com</p>
@@ -122,5 +128,9 @@
             <a href="#" class="Btn">CONTACTER L'EQUIPE DE GESTION DU PROJET</a>
         </div>
     </footer>
+    <!-- Bouton flottant WhatsApp -->
+<a href="https://wa.me/50955304065" target="_blank" class="whatsapp-float" aria-label="Envoyer un message WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
+</a>
 </body>
 </html>

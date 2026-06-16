@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<body>
 
     <!-- Navigation -->
     <header class="main-header">
@@ -17,8 +16,8 @@
                 <img src="pictures/logo.png" alt="Ecoporc+ Logo" class="logo-img">
                 <h1>ECOPORC+ D'Haïti</h1>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-item">ACCUEIL</a></li>
+            <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="projet.html" class="nav-item">LE PROJET</a></li>
                 <li><a href="equipe.html" class="nav-item">NOTRE EQUIPE</a></li>
                 <li><a href="activite.html" class="nav-item">NOS ACTIVITÉS</a></li>
@@ -26,6 +25,11 @@
                 <li><a href="contact.html" class="nav-item cta-nav">NOUS CONTACTER</a></li>
             </ul>
         </nav>
+        <script>
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('nav-links').classList.toggle('nav-open');
+            });
+        </script>
     </header>
 
 <section class="team-page">
@@ -53,9 +57,17 @@
                 </span>
 
                 <p>
-                    Erode Mondelus est étudiant finissant en agronomie à l'Université d'État d'Haïti (Campus Henry Christophe de Limonade), avec une spécialisation en production animale et végétale. Passionné par l'innovation agricole, le développement rural et la protection de l'environnement, il consacre ses efforts à la promotion de systèmes de production durables capables d'améliorer la sécurité alimentaire et les conditions de vie des communautés rurales. Fondateur du projet ECOPORC+ d'Haïti, il dirige une initiative d'élevage porcin durable visant à produire une viande de qualité tout en réduisant les impacts environnementaux. Le projet sert également de centre de démonstration et de formation pour les éleveurs et les étudiants en agronomie, favorisant le partage de connaissances et l'adoption de bonnes pratiques agricoles.
-
-Grâce à sa formation et à ses expériences professionnelles, notamment dans le suivi de systèmes d'irrigation moderne et les diagnostics de territoires agricoles, Erode a développé de solides compétences en gestion de projets, accompagnement technique des producteurs, analyse des systèmes de production et encadrement des jeunes. Son ambition est de contribuer à la modernisation de l'agriculture haïtienne à travers des solutions innovantes, rentables et respectueuses de l'environnement.
+                    Erode Mondelus est étudiant finissant en agronomie à l'Université d'État d'Haïti (Campus Henry Christophe de Limonade), 
+                    avec une spécialisation en production animale et végétale. Passionné par l'innovation agricole, le développement rural 
+                    et la protection de l'environnement, il consacre ses efforts à la promotion de systèmes de production durables capables 
+                    d'améliorer la sécurité alimentaire et les conditions de vie des communautés rurales. Fondateur du projet ECOPORC+ d'Haïti, 
+                    il dirige une initiative d'élevage porcin durable visant à produire une viande de qualité tout en réduisant les impacts environnementaux. 
+                    Le projet sert également de centre de démonstration et de formation pour les éleveurs et les étudiants en agronomie, favorisant le partage 
+                    de connaissances et l'adoption de bonnes pratiques agricoles.
+                    Grâce à sa formation et à ses expériences professionnelles, notamment dans le suivi de systèmes d'irrigation moderne et les diagnostics de territoires agricoles, 
+                    Erode a développé de solides compétences en gestion de projets et en en vulgarisation agricole., accompagnement technique des producteurs, analyse des systèmes de production
+                    et encadrement des jeunes. Son ambition est de contribuer à la modernisation de l'agriculture haïtienne à travers des solutions innovantes,
+                    rentables et respectueuses de l'environnement.
 
                 </p>
 
@@ -142,9 +154,13 @@ Grâce à sa formation et à ses expériences professionnelles, notamment dans l
             </div>
         </div>
         <div class="Footer-buttons">
-            <a href="plan d'affaires.pdf" class="Btn" target="_blank">TELECHARGER LE PLAN D'AFFAIRES DU PROJET</a>
+            <a href="Plan_d_affaires.pdf" class="Btn" target="_blank">TELECHARGER LE PLAN D'AFFAIRES DU PROJET</a>
             <a href="contact.html" class="Btn">CONTACTER L'EQUIPE DE GESTION DU PROJET</a>
         </div>
     </footer>
+       <!-- Bouton flottant WhatsApp -->
+<a href="https://wa.me/50955304065" target="_blank" class="whatsapp-float" aria-label="Envoyer un message WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
+</a>
 </body>
 </html>
