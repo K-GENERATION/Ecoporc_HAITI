@@ -12,10 +12,11 @@
         <nav class="navbar">
             <div class="logo">
                 <img src="pictures/logo.png" alt="Ecoporc+ Logo" class="logo-img">
-                <h1>ECOPORC+ D'Haïti</h1>
+                <h1>ECOPORC+</h1>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
             <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-item">RETOUR</a></li>
                 <li><a href="projet.html" class="nav-item">LE PROJET</a></li>
                 <li><a href="equipe.html" class="nav-item">NOTRE EQUIPE</a></li>
                 <li><a href="activite.html" class="nav-item">NOS ACTIVITÉS</a></li>
@@ -74,31 +75,36 @@
 
             <h2>Envoyez-nous un message</h2>
 
-            <form>
+            <form id="contact-form">
 
                 <input
                     type="text"
+                    name="from_name"
                     placeholder="Nom complet"
                     required>
 
                 <input
                     type="email"
+                    name="from_email"
                     placeholder="Adresse e-mail"
                     required>
 
                 <input
                     type="text"
+                    name="subject"
                     placeholder="Sujet"
                     required>
 
                 <textarea
+                    name="message"
                     rows="6"
                     placeholder="Rédiger votre message..."
                     required></textarea>
 
                 <button type="submit">
-                    Envoyer le message
+                    Envoyer votre message
                 </button>
+                <p id="status-message"></p>
 
             </form>
 
@@ -114,9 +120,9 @@
                 <p>Contact :  | +509 5530-4065 | erodemondelus509@gmail.com</p>
             </div>
             <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">WhatsApp</a>
+                <a href="https://www.facebook.com/profile.php?id=61582019499206&mibextid=ZbWKwL" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/ecoporc_haiti/" target="_blank">Instagram</a>
+                <a href="https://wa.me/50955304065" target="_blank">WhatsApp</a>
             </div>
         </div>
         <div class="Footer-buttons">
@@ -128,5 +134,74 @@
 <a href="https://wa.me/50955304065" target="_blank" class="whatsapp-float" aria-label="Envoyer un message WhatsApp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
 </a>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+// Initialisation EmailJS
+emailjs.init("4NKTnhK6FiDXdH3Xw");
+
+// Sélection du formulaire
+const form = document.getElementById("contact-form");
+const statusMessage = document.getElementById("status-message");
+const button = form.querySelector("button");
+
+form.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    // Désactiver le bouton pendant l'envoi
+    button.disabled = true;
+    button.innerHTML = "Envoi en cours...";
+
+    emailjs.sendForm(
+        "service_aycfofu",
+        "template_gkvr8we",
+        this
+    )
+
+    .then(function(){
+
+        // Message de succès
+        statusMessage.innerHTML =
+        "Nous vous remercions ! Votre message a été envoyé avec succès.";
+
+        statusMessage.style.color = "green";
+        statusMessage.style.fontWeight = "bold";
+        statusMessage.style.marginTop = "15px";
+
+        // Vider le formulaire
+        form.reset();
+
+        // Réactiver le bouton
+        button.disabled = false;
+        button.innerHTML = "Envoyer le message";
+
+        // Faire disparaître le message après 5 secondes
+        setTimeout(function(){
+            statusMessage.innerHTML = "";
+        }, 5000);
+
+    })
+
+    .catch(function(error){
+
+        // Message d'erreur
+        statusMessage.innerHTML =
+        "Une erreur s'est produite. Veuillez réessayer.";
+
+        statusMessage.style.color = "red";
+        statusMessage.style.fontWeight = "bold";
+
+        console.log(error);
+
+        button.disabled = false;
+        button.innerHTML = "Envoyer le message";
+
+    });
+
+});
+
+</script>
 </body>
 </html>
