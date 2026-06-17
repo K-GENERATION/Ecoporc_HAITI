@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
- <header class="main-header">
+<header class="main-header">
         <nav class="navbar">
             <div class="logo">
                 <img src="pictures/logo.png" alt="Ecoporc+ Logo" class="logo-img">
                 <h1>ECOPORC+ D'Haïti</h1>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-item">ACCUEIL</a></li>
+            <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="projet.html" class="nav-item">LE PROJET</a></li>
                 <li><a href="equipe.html" class="nav-item">NOTRE EQUIPE</a></li>
                 <li><a href="activite.html" class="nav-item">NOS ACTIVITÉS</a></li>
@@ -23,7 +23,13 @@
                 <li><a href="contact.html" class="nav-item cta-nav">NOUS CONTACTER</a></li>
             </ul>
         </nav>
+        <script>
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('nav-links').classList.toggle('nav-open');
+            });
+        </script>
     </header>
+
 <section class="contact-section">
 
     <div class="contact-header">
