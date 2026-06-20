@@ -488,49 +488,151 @@ h1, h2, h3 {
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
-/* ── STATS BAR ── */
-  .stats-bar {
+/* /* ── STATS BAR ── */
+
+.stats-bar{
     background: #eea303;
     border-bottom: 10px solid #fdfdfd;
-    padding: 0px;
-    justify-content: space-between;
-    border-radius: 0%;
-    gap: 12px;
-  }
+    padding: 20px;
+    border-radius: 30px;
+    margin: 10px 5%;
+}
 
-  .stats-inner {
-    max-width: 1100px;
-    margin: 10px;
+.stats-header{
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    text-decoration-thickness: 2px;
+}
+
+.stats-inner{
+    max-width: 1000px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-  }
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
 
-  .stat-item {
-    padding: 28px 24px;
+.stat-item{
+    padding: 25px 20px;
     text-align: center;
     border-right: 1px solid #e8f0e8;
-    gap: 50px;
-  }
+}
 
-  .stat-item:last-child { border-right: none; }
+.stat-item:last-child{
+    border-right: none;
+}
 
-  .stat-number {
+.stat-number{
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: 48px;
     font-weight: 700;
     color: var(--vert-fonce);
     display: block;
-  }
+}
 
-  .stat-label {
-    font-size: 13px;
-    color: var(--gris-texte);
-    margin-top: 4px;
-  }
+.stat-label{
+    font-size: 18px;
+    color: white;
+    margin-top: 5px;
+}
+
+/* ===== Tablettes ===== */
+
+@media screen and (max-width: 992px){
+
+    .stats-inner{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .stat-item:nth-child(2){
+        border-right: none;
+    }
+
+    .stat-number{
+        font-size: 40px;
+    }
+
+}
+
+/* ===== Téléphones ===== */
+
+@media screen and (max-width: 768px){
+
+    .stats-bar{
+        border-radius: 20px;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .stats-header{
+        font-size: 20px;
+    }
+
+    .stats-inner{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stat-item{
+        border-right: none;
+        border-bottom: 1px solid #e8f0e8;
+        padding: 20px 10px;
+    }
+
+    .stat-item:last-child{
+        border-bottom: none;
+    }
+
+    .stat-number{
+        font-size: 34px;
+    }
+
+    .stat-label{
+        font-size: 16px;
+    }
+
+}
 #status-message{
     text-align: center;
     font-size: 16px;
     margin-top: 15px;
     transition: .3s;
+}
+/* Bouton flottant Plan de financement */
+.finance-btn{
+    position: fixed;
+    right: 20px;
+    bottom: 110px; /* juste au-dessus du bouton WhatsApp */
+
+    width: 65px;
+    height: 65px;
+
+    background: #eea303;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    font-size: 34px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.3);
+
+    z-index: 9999;
+
+    transition: all .3s ease;
+}
+
+.finance-btn:hover{
+    transform: scale(1.1);
+    background: #d89300;
 }

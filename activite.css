@@ -69,43 +69,85 @@
     text-align:justify
   }
 
-  /* ── STATS BAR ── */
-  .stats-bar {
+/* SECTION */
+.realisations{
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* TEXTE */
+.realisations-text{
+    margin-bottom: 40px;
+}
+
+.realisations-text h2{
+    color: #2f4f4f;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.realisations-text p{
+    text-align: justify;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* BLOC DES STATS */
+.stats-container{
+
     background: #eea303;
-    border-bottom: 1px solid #fdfdfd;
-    padding: 0;
-    justify-content: center;
-  }
 
-  .stats-inner {
-    max-width: 1100px;
-    margin: 0 auto;
+    padding: 40px;
+
+    border-radius: 30px;
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
 
-  .stat-item {
-    padding: 28px 24px;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+
+    gap: 25px;
+}
+
+/* CARTE */
+.stat-card{
+
+    background: rgba(255,255,255,.1);
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
     text-align: center;
-    border-right: 1px solid #e8f0e8;
-  }
 
-  .stat-item:last-child { border-right: none; }
+    transition: .3s;
+}
 
-  .stat-number {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--vert-fonce);
+.stat-card:hover{
+    transform: translateY(-5px);
+}
+
+/* NOMBRES */
+.stat-number{
     display: block;
-  }
 
-  .stat-label {
-    font-size: 13px;
-    color: var(--gris-texte);
-    margin-top: 4px;
-  }
+    font-size: 50px;
 
+    font-weight: bold;
+
+    color: #1d6b35;
+
+    margin-bottom: 10px;
+}
+
+/* TEXTE */
+.stat-card p{
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 500;
+}
   /* ── SECTION BASE ── */
   section {
     padding: 80px 2.5rem;
