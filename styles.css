@@ -24,7 +24,6 @@ h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
-.h2 {text-align: right;}
 
 .container {
     max-width: 1100px;
@@ -131,8 +130,8 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544225580-3ef372559f35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); /* Placeholder image */
+    min-height: 80vh; padding: 80px 20px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(pictures/ecoporc_hero_background.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -140,7 +139,6 @@ h1, h2, h3 {
     justify-content: left;
     text-align: left;
     color: white;
-    background-image: url(pictures/ecoporc_hero_background.png);
 }
 
 .hero-content h1 {
@@ -299,7 +297,7 @@ h1, h2, h3 {
         width: 100%;
     }
     .nav-item {
-        margin: 0 10px;
+        margin: 8px 0;
     }
     .mission-image-container {
         flex: 1 1 100%;
